@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_person_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context="com.jackzhao.www.mywebservice.person_details">
+
+        <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/layout_person_photo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:id="@+id/layout_person_top">
+
+                <LinearLayout
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/img_person_photo"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:contentDescription=""></ImageView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:background="@android:color/holo_blue_bright"
+                    android:orientation="vertical"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="20dp"
+                    android:id="@+id/layout_person_name">
+
+                    <TextView
+                        android:id="@+id/lb_person_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="24sp"
+                        android:textStyle="normal|bold" />
+
+                    <TextView
+                        android:id="@+id/lb_person_special"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:textColor="?android:attr/textColorSecondary" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fab_backtolist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                app:layout_anchorGravity="bottom|right|end"
+                app:srcCompat="?attr/actionModeCloseDrawable"
+                app:layout_anchor="@id/layout_person_top"
+                android:accessibilityTraversalAfter="@+id/layout_person_top"
+                android:layout_marginTop="175dp"
+                android:layout_marginRight="20dp"
+                android:onClick="doGoPersonList"/>
+
+        </android.support.design.widget.CoordinatorLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_person_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_person_photo"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <TextView
+                android:id="@+id/lb_person_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="20dp"
+                android:paddingTop="20dp"
+                android:textSize="18sp"
+                android:lineSpacingExtra="10sp" />
+
+            <TextView
+                android:id="@+id/lb_person_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="8sp"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</ScrollView>
